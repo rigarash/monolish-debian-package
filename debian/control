@@ -13,3 +13,6 @@ Description: MONOlithic LInier equation Solvers for Highly-parallel architecture
  variable data types, matrix structures, matrix data formats,
  vender specific data transfer APIs, and vender specific numerical
  algebra libraries.
+ .
+ This package provides the development files for building applications using
+ monolish, as well as monolish shared libraries, using OSS libraries for CPU.
