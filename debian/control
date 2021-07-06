@@ -5,7 +5,7 @@ Priority: optional
 Standards-Version: 4.5.0
 Build-Depends: debhelper (>= 9), patchelf
 
-Package: monolish-cpu-oss
+Package: monolish
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: MONOlithic LInier equation Solvers for Highly-parallel architecture
