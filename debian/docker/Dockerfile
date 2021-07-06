@@ -18,4 +18,4 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /monolish
 RUN git clone -b ubuntu/focal/oss https://github.com/rigarash/monolish-debian-package.git \
  && cd monolish-debian-package \
- && gbp buildpackage -S
+ && gbp buildpackage
