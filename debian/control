@@ -15,4 +15,5 @@ Description: MONOlithic LInier equation Solvers for Highly-parallel architecture
  algebra libraries.
  .
  This package provides the development files for building applications using
- monolish, as well as monolish shared libraries, using Intel MKL libraries for CPU.
+ monolish, as well as monolish shared libraries, using Intel MKL libraries 
+ for CPU as well as CUDA libraries for NVIDIA GPU.

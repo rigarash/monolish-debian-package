@@ -16,6 +16,6 @@ RUN apt-get update && apt-get install -y \
 
 # Build monolish with git-buildpackage
 WORKDIR /monolish
-RUN git clone -b ubuntu/focal/mkl https://github.com/rigarash/monolish-debian-package.git \
+RUN git clone -b ubuntu/focal/mkl+nvidia https://github.com/rigarash/monolish-debian-package.git \
  && cd monolish-debian-package \
  && gbp buildpackage

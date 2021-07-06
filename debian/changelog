@@ -1,4 +1,4 @@
-monolish (0.14.0-1+mkl) UNRELEASED; urgency=medium
+monolish (0.14.0-1+mkl+nvidia) UNRELEASED; urgency=medium
 
   [ Ryo IGARASHI ]
   * Initial release. 
