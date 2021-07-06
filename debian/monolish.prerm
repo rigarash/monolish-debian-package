@@ -4,4 +4,5 @@ set -e
 
 rm -f /usr/lib/libmonolish_gpu.so
 
+#DEBHELPER#
 exit 0
