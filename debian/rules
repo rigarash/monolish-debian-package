@@ -21,3 +21,6 @@ override_dh_install:
 	patchelf --force-rpath --set-rpath '/usr/lib/monolish' $(DESTDIR)/usr/lib/libmonolish_gpu_62.so
 	patchelf --force-rpath --set-rpath '/usr/lib/monolish' $(DESTDIR)/usr/lib/libmonolish_gpu_70.so
 	patchelf --force-rpath --set-rpath '/usr/lib/monolish' $(DESTDIR)/usr/lib/libmonolish_gpu_75.so
+
+override_dh_shlibdeps:
+	dh_shlibdeps -l/usr/local/cuda-10.1/lib64/stubs
