@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     git-buildpackage \ 
     debhelper \
     patchelf \
+    nvidia-headless-no-dkms-470 \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
@@ -22,4 +23,4 @@ RUN git clone -b 'ubuntu/focal/mkl+nvidia' https://github.com/rigarash/monolish-
 ENV CC=/usr/local/llvm-11.0.1/bin/clang CXX=/usr/local/llvm-11.0.1/bin/clang++
 
 WORKDIR /monolish/monolish-debian-package
-CMD gbp buildpackage
+RUN gbp buildpackage
