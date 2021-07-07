@@ -1,4 +1,4 @@
-FROM ghcr.io/ricosjp/allgebra/cuda10_1/clang11gcc7/mkl:21.05.0
+FROM ghcr.io/ricosjp/allgebra/cuda10_1/clang11gcc7/oss:21.05.0
 LABEL maintainer "Ryo IGARASHI <rigarash@gmail.com>"
 
 COPY . /monolish
