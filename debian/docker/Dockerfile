@@ -22,4 +22,4 @@ RUN git clone -b 'ubuntu/focal/mkl+nvidia' https://github.com/rigarash/monolish-
 ENV CC=/usr/local/llvm-11.0.1/bin/clang CXX=/usr/local/llvm-11.0.1/bin/clang++
 
 WORKDIR /monolish/monolish-debian-package
-RUN gbp buildpackage
+CMD gbp buildpackage
