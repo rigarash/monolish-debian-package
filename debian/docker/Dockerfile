@@ -16,6 +16,10 @@ RUN apt-get update && apt-get install -y \
 
 # Build monolish with git-buildpackage
 WORKDIR /monolish
-RUN git clone -b ubuntu/focal/mkl+nvidia https://github.com/rigarash/monolish-debian-package.git \
- && cd monolish-debian-package \
- && gbp buildpackage
+RUN git clone -b 'ubuntu/focal/mkl+nvidia' https://github.com/rigarash/monolish-debian-package.git
+
+# workaround allgebra bug
+ENV CC=/usr/local/llvm-11.0.1/bin/clang CXX=/usr/local/llvm-11.0.1/bin/clang++
+
+WORKDIR /monolish/monolish-debian-package
+CMD gbp buildpackage
