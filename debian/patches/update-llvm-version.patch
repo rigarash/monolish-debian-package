@@ -1,0 +1,15 @@
+diff --git a/Makefile b/Makefile
+index e35377c0..5de6107c 100644
+--- a/Makefile
++++ b/Makefile
+@@ -141,8 +141,8 @@ define template
+ clang_gpu_$(1):
+ 	cmake $(MONOLISH_TOP) \
+ 		-DCMAKE_INSTALL_PREFIX=$(MONOLISH_DIR) \
+-		-DCMAKE_C_COMPILER=/usr/local/llvm-11.0.0/bin/clang \
+-		-DCMAKE_CXX_COMPILER=/usr/local/llvm-11.0.0/bin/clang++ \
++		-DCMAKE_C_COMPILER=/usr/local/llvm-11.0.1/bin/clang \
++		-DCMAKE_CXX_COMPILER=/usr/local/llvm-11.0.1/bin/clang++ \
+ 		-DCMAKE_VERBOSE_MAKEFILE=1 \
+ 		-Bbuild_gpu_$(1) \
+ 		-DMONOLISH_USE_GPU=ON \
