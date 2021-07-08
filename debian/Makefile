@@ -1,3 +1,4 @@
 package:
 	docker build -t monolish-debian-package docker
-	docker run --rm --volume=$(abspath ..):/monolish/monolish-debian-package --gpus all --cap-add SYS_ADMIN monolish-debian-package
+	sleep 2
+	docker cp $(shell docker create monolish-debian-package:latest):/monolish/$(shell docker run --rm monolish-debian-package:latest ls | grep ".*\.deb$$") .
