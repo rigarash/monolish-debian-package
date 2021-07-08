@@ -14,6 +14,8 @@ RUN apt-get update && apt-get install -y \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
+RUN ln -s /usr/local/cuda-10.1/lib64/stubs/libcuda.so /usr/local/cuda-10.1/lib64/stubs/libcuda.so.1
+
 # Build monolish with git-buildpackage
 WORKDIR /monolish
 RUN git clone -b 'ubuntu/focal/oss+nvidia' https://github.com/rigarash/monolish-debian-package.git
